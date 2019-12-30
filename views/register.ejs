@@ -1,0 +1,70 @@
+<div class="mt-5">
+     <div class="col-md-6 m-auto">
+         <div class="card card-body">
+             <h3 class="text-center">Registeration</h3>
+                <% include ./partials/messages %>
+               
+                <form action="/users/register" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            class="form-control"
+                            type="name"
+                            name="name"
+                            id="name"
+                            value="<%=  typeof name != 'undefined' ? name : '' %>"
+                            placeholder="Enter a name"
+                        />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            class="form-control"
+                            type="email"
+                            name="email"
+                            id="email"
+                            value="<%=  typeof name != 'undefined' ? email : '' %>"
+                            placeholder="Enter a email"
+                        />
+
+                    </div>
+
+                    <div class="form-group">
+                            <label  for="password">Password</label>
+                            <input
+                                class="form-control"
+                                type="password"
+                                name="password"
+                                id="password"
+                                value="<%=  typeof password != 'undefined' ? password : '' %>"
+                                placeholder="Enter Password"
+                            />
+    
+                    </div>
+
+                    <div class="form-group">
+                            <label  for="password2">Confirm Password</label>
+                            <input
+                                class="form-control"
+                                type="password"
+                                name="password2"
+                                id="password2"
+                                value="<%=  typeof password != 'undefined' ? password2 : '' %>"
+                                placeholder="Enter Password"
+                            />
+    
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    
+                </form>
+
+              
+                        <p class="text-center mt-2">Have a account? <a href="/users/login">Login</a></p>
+                
+                
+         </div>
+     </div>
+</div>
